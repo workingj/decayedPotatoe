@@ -3,6 +3,25 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-image: url('https://cdn.discordapp.com/attachments/956824414434000916/1209151487368761424/are-sprouted-potatoes-ok-safe-to-eat-e4c7bd16ff524844b5bae8fcd29dc83f.jpg?ex=65e5e113&is=65d36c13&hm=b5cb2fb4c0206b33e50b01de128653e7eb3be6a386dd27a6507abcb5557a253a&');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 300px;
+  color: rgb(236, 234, 243);
+  margin: 1rem;
+}
+
+.topContainer h1 { 
+  background-color: rgb(182, 155, 200);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.topContainer input {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
 }
 
 .movieContainer {
@@ -13,11 +32,58 @@
 
 body {
   background-color: lightblue;
+  font-family: Arial, sans-serif;
 }
 
 .movieCard {
   padding: 1rem;
   margin: 1rem;
-  border: 2px solid red;
+  border: 2px solid rgb(220, 220, 220);
   border-radius: 10px;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.movieCard:hover {
+  background-color: lightgray;
+
+}
+
+.movieInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+
+}
+
+.movieCard img {
+  width: 60px;
+  height: auto;
+  margin-right: 1rem;
+
+}
+
+.selectedMovie {
+  background-color: rgb(167, 190, 195);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+.movieContainer {
+  background-color: rgb(244, 244, 244);
+  padding: 2rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }

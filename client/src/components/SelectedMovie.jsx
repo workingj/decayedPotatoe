@@ -40,9 +40,9 @@ const SelectedMovie = ({movie}) => {
     };
 
   return (
-    <div>
-        {movie.Title}
-        <h1>Rating is {rating}/5 Stars</h1>
+    <div className='selectedMovie'>
+        <h1>{movie.Title}</h1>
+        <h2>Rating is {rating}/5 Stars</h2>
         <MoviesRates
         rating={rating}
         setRating={setRating} 
