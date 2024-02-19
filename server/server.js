@@ -1,6 +1,7 @@
 import Express, {Router} from 'express';
 import cors from 'cors';
 import './pool.js';
+import ratingSchema from './pool.js'
 
 const app = Express();
 const port = 3001;
@@ -18,6 +19,7 @@ movieRouter.get('/', (req, res) => {
 
 movieRouter.post('/', (req, res) => {
     const data = req.body;
+    console.log("DATA-----------------------",data);
     try {
         const rating = new ratingSchema(data);
         rating.save();

@@ -1,13 +1,14 @@
 import mongoose from 'mongoose';
 
 const ratingSchema = new mongoose.Schema({
-    name: {
+    title: {
         type: String,
-        required: true,
+        required: [true, 'title is required'],
+        trim: true,
     },
     rating: {
         type: Number,
-        required: true,
+        required: [true, 'rating is required'],
     }
 });
 
