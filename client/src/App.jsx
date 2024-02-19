@@ -10,6 +10,7 @@ function App() {
 
   const [selectedMovie, setSelectedMovie] = useState({Title: "No movie selected"});
 
+function App() {
   return (
     <>
       <div className="topContainer">

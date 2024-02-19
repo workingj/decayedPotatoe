@@ -15,6 +15,7 @@ export default function MoviesApiContextProvider(props) {
         if (allowFetch) {
           const res = await fetch(api);
           const resData = await res.json();
+          console.log(resData);
           setData(resData);
           setAllowFetch(false);
         }

@@ -2,6 +2,14 @@ import React, { useState } from "react";
 import { Rating } from "react-simple-star-rating";
 
 function MoviesRates({rating, setRating, handleRating, handleReset}) {
+function MoviesRates() {
+  const [rating, setRating] = useState(0);
+  const handleRating = (rate, number) => {
+    setRating(rate);
+  };
+  const handleReset = () => {
+    setRating(0);
+  };
 
   return (
     <div>
