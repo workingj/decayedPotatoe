@@ -12,8 +12,16 @@ app.use(cors());
 
 app.use('/', movieRouter);
 
-movieRouter.get('/', (req, res) => {
-    res.json('Getting - Hello from the server');
+movieRouter.get('/', async (req, res) => {
+    const data = req.body;
+    try {
+        const rating = new ratingSchema();
+        const results = await ratingSchema.find();
+        res.json(results);
+    } catch (error) {
+        console.error(error);
+        res.send('Error:', error.stack);
+    }
 });
 
 movieRouter.post('/', (req, res) => {
@@ -30,4 +38,4 @@ movieRouter.post('/', (req, res) => {
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
-});``
+});

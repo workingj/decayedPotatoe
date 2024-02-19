@@ -3,7 +3,7 @@ import MoviesRates from './MoviesRates';
 
 const SelectedMovie = ({movie}) => {
 
-
+    const [submitted, setSubmitted] = useState(false);
     const [rating, setRating] = useState(0);
     const handleRating = (rate, number) => {
       setRating(rate);
@@ -23,6 +23,7 @@ const SelectedMovie = ({movie}) => {
     };  
 
     const postMovieRating = async () => {
+        setSubmitted(true);
         createMovieRating();
         try {
             const res = await fetch('http://localhost:3001/', {
@@ -50,6 +51,12 @@ const SelectedMovie = ({movie}) => {
         handleReset={handleReset}
         />
         <button onClick={() => postMovieRating()}>Submit</button>
+
+        {submitted ? (
+            <h2>Rating Submitted</h2>
+        ) : (
+            <h2>Click Submit to Rate</h2>
+        )}
 
     </div>
   )
