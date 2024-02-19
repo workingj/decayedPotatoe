@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import SearchedMovies from "./components/SearchedMovies";
 import Title from "./components/Title";
 import SelectedMovie from "./components/SelectedMovie.jsx";
+import RatedMovies from "./components/RatedMovies.jsx";
 
  export default function App() {
 
@@ -21,6 +22,9 @@ import SelectedMovie from "./components/SelectedMovie.jsx";
 
       <div className="movieContainer">
         <SearchedMovies setSelectedMovie={setSelectedMovie}/>
+      </div>
+      <div className="bottomContainer">
+      <RatedMovies />
       </div>
     </>
   );
