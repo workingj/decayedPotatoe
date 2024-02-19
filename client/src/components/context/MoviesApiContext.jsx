@@ -3,10 +3,9 @@ import { createContext, useState, useEffect } from "react";
 export const MoviesApiContext = createContext();
 
 export default function MoviesApiContextProvider(props) {
-  const [userInput, setUserInput] = useState([]);
+  const [userInput, setUserInput] = useState("");
   const [allowFetch, setAllowFetch] = useState(false);
-
-  const api = `http://hn.algolia.com/api/v1/search?query=${userInput}`;
+  const api = `http://www.omdbapi.com/?apikey=87c0dd49&s=${userInput}`;
 
   const [data, setData] = useState("");
 
@@ -16,7 +15,6 @@ export default function MoviesApiContextProvider(props) {
         if (allowFetch) {
           const res = await fetch(api);
           const resData = await res.json();
-
           console.log(resData);
           setData(resData);
           setAllowFetch(false);

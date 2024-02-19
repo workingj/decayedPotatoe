@@ -15,6 +15,11 @@ function SearchBar() {
           onChange={(e) => {
             setUserInput(e.target.value);
           }}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              setAllowFetch(true);
+            };
+          }}
         />
         🔎
       </label>

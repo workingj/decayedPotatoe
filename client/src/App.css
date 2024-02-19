@@ -8,4 +8,16 @@
 .movieContainer {
   display: flex;
   justify-content: space-around;
+
+}
+
+body {
+  background-color: lightblue;
+}
+
+.movieCard {
+  padding: 1rem;
+  margin: 1rem;
+  border: 2px solid red;
+  border-radius: 10px;
 }

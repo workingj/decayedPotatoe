@@ -1,8 +1,14 @@
 import "./App.css";
+import {useState} from "react";
 import MoviesRates from "./components/MoviesRates";
 import NavBar from "./components/NavBar";
 import SearchedMovies from "./components/SearchedMovies";
 import Title from "./components/Title";
+import SelectedMovie from "./components/SelectedMovie.jsx";
+
+function App() {
+
+  const [selectedMovie, setSelectedMovie] = useState({Title: "No movie selected"});
 
 function App() {
   return (
@@ -11,10 +17,12 @@ function App() {
         <Title />
         <NavBar />
       </div>
+      <SelectedMovie
+        movie={selectedMovie} />
 
       <div className="movieContainer">
-        <SearchedMovies />
-        <MoviesRates />
+        <SearchedMovies 
+        setSelectedMovie={setSelectedMovie}/>
       </div>
     </>
   );
