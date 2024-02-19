@@ -6,11 +6,10 @@ import SearchedMovies from "./components/SearchedMovies";
 import Title from "./components/Title";
 import SelectedMovie from "./components/SelectedMovie.jsx";
 
-function App() {
+ export default function App() {
 
   const [selectedMovie, setSelectedMovie] = useState({Title: "No movie selected"});
 
-function App() {
   return (
     <>
       <div className="topContainer">
@@ -21,11 +20,9 @@ function App() {
         movie={selectedMovie} />
 
       <div className="movieContainer">
-        <SearchedMovies 
-        setSelectedMovie={setSelectedMovie}/>
+        <SearchedMovies setSelectedMovie={setSelectedMovie}/>
       </div>
     </>
   );
 }
 
-export default App;
