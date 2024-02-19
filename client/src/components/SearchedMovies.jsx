@@ -12,6 +12,8 @@ function SearchedMovies({setSelectedMovie}) {
     setSelectedMovie(movie);
   };
 
+  console.log(data);
+
   return (
     <div>
       <h2>List of searched movies</h2>
@@ -22,8 +24,11 @@ function SearchedMovies({setSelectedMovie}) {
           data.map((movie) => {
             return (
               <div className="movieCard" key={movie.imdbID} onClick={() => highlightMovie(event, movie)}>
-                <p>{movie.Title}</p>
-                <p>{movie.Year}</p>
+                <div className="movieInfo"> 
+                  <p>{movie.Title}</p>
+                  <p>{movie.Year}</p>
+                </div>
+                <img src={movie.Poster} alt={movie.Title} />
               </div>
             );
           })
