@@ -19,7 +19,6 @@ movieRouter.get('/', (req, res) => {
 
 movieRouter.post('/', (req, res) => {
     const data = req.body;
-    console.log("DATA-----------------------",data);
     try {
         const rating = new ratingSchema(data);
         rating.save();
@@ -32,4 +31,4 @@ movieRouter.post('/', (req, res) => {
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
-});``
+});
